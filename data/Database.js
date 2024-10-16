@@ -2,7 +2,7 @@ const sql = require('mssql');
 
 class Database {
     static connect() {
-        if(!Database.connection) {
+        if(!Database.pool) {
             Database.pool = sql.connect({
                 server: 'cisdbss.pcc.edu',
                 database: 'IMDB',
