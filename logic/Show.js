@@ -9,11 +9,35 @@ class Show {
     }
 
     getTconst() {
-        return this.tconst;
+        return this.tconst || "N/A";
     }
 
     setTconst(tconst) {
         this.tconst = tconst;
+    }
+
+    getTitleType() {
+        return this.titleType || "N/A";
+    }
+
+    setTitleType(titleType) {
+        this.titleType = titleType;
+    }
+
+    getStartYear() {
+        return this.startYear || 0;
+    }
+
+    setStartYear(startYear) {
+        this.startYear = startYear;
+    }
+
+    getPrimaryTitle() {
+        return this.primaryTitle || "N/A";
+    }
+
+    setPrimaryTitle(primaryTitle) {
+        this.primaryTitle = primaryTitle;
     }
 
     static async fetchTitles(title) {
