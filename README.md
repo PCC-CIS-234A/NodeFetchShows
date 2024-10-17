@@ -28,7 +28,7 @@ This branch also has some additional requirements:
 * cors - allows cross origin resource sharing for the web servers
 * body-parser - parses POST requests in HTTP request bodies. Not used at the moment but will be later.
 
-* To run the example, execute 
+To run the example, execute 
 
 ```console
 node main.js 
