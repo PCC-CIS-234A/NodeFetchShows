@@ -14,6 +14,7 @@ Please make sure the following packages are installed:
 * mssql - A library for talking to Microsoft SQL Server databases.
 * node-mssql - A database driver that is used by mssql.
 * readline-sync - A simple package for getting input from the console.
+* nunjucks - A templating library for HTML similar to JinJa2.
 
 ## Contact
 If you have any questions, please contact Marc at PCC CIS or the course instructors.

@@ -1,10 +1,8 @@
-const Database = require("./data/Database.js");
-const UI = require("./ui/UI.js");
+const WebUI = require("./ui/WebUI.js");
 
 async function main() {
-    const ui = new UI();
+    const ui = new WebUI();
     await ui.run();
-    process.exit();
 }
 
-main()
+main();

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Placeholder Title{% endblock %}</title>
+    {% block scripts %}
+    <script src="scripts.js"></script>
+    {% endblock %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="content">
+    <h1>{% block heading %}Placeholder Heading{% endblock %}</h1>
+    {% block content %}
+    <p>Placeholder content</p>
+    {% endblock %}
+</div>
+{% block footer %}<hr>
+<div id="footer">
+<small>Example Code for CIS 234A. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Attribution
+    4.0 International (CC BY 4.0)</a> </small>
+</div>
+{% endblock %}
+</body>
+</html>

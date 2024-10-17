@@ -5,9 +5,9 @@ class Database {
         if(!Database.pool) {
             Database.pool = sql.connect({
                 server: 'cisdbss.pcc.edu',
-                database: 'IMDB',
-                user: '275student',
-                password: '275student',
+                user: '234A_Event_Loop_Heroes',
+                password: 'GoodDay1$',
+                database: '234A_Event_Loop_Heroes',
                 options: {
                     enableArithAbort: true,
                     trustServerCertificate: true
@@ -24,17 +24,14 @@ class Database {
 
     /* Review Notification Log */
 
-    static async fetchTitles(title) {
+    static async fetchNotifications() {
         Database.connect();
         const query = `
-            SELECT TOP 50 tconst, titleType, startYear, primaryTitle
-            FROM title_basics
-            WHERE primaryTitle = @title;
+            SELECT NOTIFICATION_ID, USERNAME, N_DATE, N_SUBJECT, N_MESSAGE, RECIPIENTS
+            FROM NOTIFICATIONS;
         `;
         let conn = await Database.pool;
-        let result = await conn.request()
-            .input("title", sql.NVarChar('Max'), title)
-            .query(query);
+        let result = await conn.query(query);
         return result.recordset;
     }
 }

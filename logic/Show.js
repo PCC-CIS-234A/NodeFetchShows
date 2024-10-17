@@ -41,7 +41,7 @@ class Show {
     }
 
     static async fetchTitles(title) {
-        const shows = await Database.fetchTitles(title);
+        const shows = await Database.fetchNotifications(title);
 
         return shows.map(s => new Show(
             s.tconst,

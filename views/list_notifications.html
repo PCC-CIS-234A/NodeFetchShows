@@ -1,0 +1,23 @@
+{% extends "default.html" %}
+{% block title %}List Notifications{% endblock %}
+{% block heading %}All Notifications{% endblock %}
+{% block content %}
+<table>
+  <tr>
+    <th>Date & Time</th>
+    <th>Subject</th>
+    <th>Message Preview</th>
+    <th>Staff Member</th>
+    <th>Subscribers Notified</th>
+  </tr>
+  {% for notification in notifications %}
+  <tr>
+    <td>{{notification.date}}</td>
+    <td>{{notification.subject}}</td>
+    <td>{{notification.message}}</td>
+    <td>{{notification.userName}}</td>
+    <td>{{notification.recipients}}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
